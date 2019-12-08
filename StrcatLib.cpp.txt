@@ -1,0 +1,22 @@
+// StrcatLib.cpp : 定义静态库的函数strcat
+//
+
+#include "StrStaticLib.h"
+
+#include <stdexcept>
+#include<assert.h>
+using namespace std;
+
+namespace StringFuncs
+{
+	char* MyStringFuncs::strcat(char* dest, const char* src)
+	{
+		assert(dest != NULL && src != NULL);
+                                char *temp = dest;
+                                while (*temp != '\0')
+                                temp++;
+                                while ((*temp++ = *src++) != '\0');
+                                return dest;
+	}
+
+}
